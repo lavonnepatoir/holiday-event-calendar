@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Event Calendar - HTML Conversion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-container">
+        
+        <header class="app-header">
+            <h1>Holiday Event Calendar</h1>
+            <p>Select a date range and category to view events</p>
+        </header>
+
+        <form id="filterForm" class="filter-container">
+            
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" class="date-input">
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate" class="date-input">
+
+            <label for="category">Select Category:</label>
+            <select id="category" name="category" class="category-select">
+                <option value="ALL">ALL</option>
+                <option value="social">Social</option>
+                <option value="family">Family</option>
+                <option value="market">Market</option>
+            </select>
+
+            <button type="submit" id="filterButton" class="filter-button">Filter Events</button>
+        </form>
+
+        <div class="events-container">
+            <h2>Filtered Events</h2>
+            <div id="eventList">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

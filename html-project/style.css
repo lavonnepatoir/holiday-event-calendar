@@ -1,0 +1,144 @@
+:root {
+  --main-font: 'Marcellus SC', cursive;
+  --script-font: 'Sacramento', cursive;
+  --card-bg-color: rgb(173, 192, 176);
+  --header-color: #8d0303;
+  --button-color: #094825;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  min-height: 100vh;
+  color: #4a4a4a;
+  box-sizing: border-box;
+  overflow-y: auto; 
+  padding: 20px 0;
+  
+  /* --- BACKGROUND IMAGE: CHOOSE ONE OF THE OPTIONS BELOW --- */
+  /* OPTION A: If you have the image in ./assets/images/ */
+  /* background-image: url('./assets/images/pastel-christmas-wallpaper.jpg'); */
+
+  /* OPTION B: Use the public placeholder URL */
+  background-image: url('./assets/images/pastel-christmas-wallpaper.jpg');
+  
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.app-container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--card-bg-color); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header h1 {
+  font-family: var(--script-font);
+  font-size: 3.5rem;
+  margin: 0;
+  color: var(--header-color);
+  text-shadow: #ffe0e4 1px 0 10px;
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  color: #422121;
+}
+
+.events-container h2 {
+  text-align: center;
+  font-family: var(--script-font);
+  font-size: 3.5rem;
+  margin: 0.5em 0 0.3em 0;
+  color: var(--header-color);
+  text-shadow: #ffe0e4 1px 0 10px;
+}
+
+.filter-container {
+  margin-top: 10px;
+}
+
+.filter-container label {
+  display: block;
+  margin: 15px 0 5px 0;
+  color: #422121;
+  text-align: left;
+  font-weight: bold;
+}
+
+.date-input,
+.category-select {
+  font-family: var(--main-font);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.filter-button:hover {
+  background-color: #77f7b0;
+  color: #094825;
+}
+
+.events-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.event-item {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background: #ffffff;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#eventList {
+  text-align: center;
+}
+
+.no-events {
+    color: #422121;
+    padding: 10px;
+    font-style: italic;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+}
