@@ -1,38 +1,117 @@
-.App {
+body {
+  font-family: 'Marcellus SC', cursive;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150vh;
+  color: #4a4a4a;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-image: url('./assets/images/pastel-christmas-wallpaper.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.app-container {
   text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgb(173, 192, 176); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 3.5rem;
+  margin: 0;
+  color: #8d0303;
+  text-shadow: #ffe0e4 1px 0 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header p {
+  font-size: 1.2rem;
+  color: #422121;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filter-container label {
+  display: block;
+  margin: 15px 0;
+  color: #422121;
+}
+
+.date-input,
+.category-select {
+  font-family: 'Marcellus SC', cursive;
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #094825;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #77f7b0;
+}
+
+.events-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.events-container h2 {
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+  font-size: 3.5rem;
+  margin: 0;
+  color: #8d0303;
+  text-shadow: #ffe0e4 1px 0 10px;
+}
+
+.event-item {
+  text-align: center;
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background: #ffffff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-container {
+  min-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
